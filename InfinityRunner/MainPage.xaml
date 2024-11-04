@@ -2,40 +2,26 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InfinityRunner.MainPage">
-      
-        <Grid>
-           
+    
+    <Grid>
+    <HorizontalStackLayout x:Name="primeiraimg">
+       <Image Source ="img1.jpg"/>
+       <Image Source ="img1.jpg"/>
+       <Image Source ="img1.jpg"/>
+    </HorizontalStackLayout>
+  
+    <HorizontalStackLayout x:Name="segundaimg">
+       <Image Source ="imgplanetas.jpg"/>
+       <Image Source ="imgplanetas.jpg"/>
+       <Image Source ="imgplanetas.jpg"/>
+    </HorizontalStackLayout>
 
+    <HorizontalStackLayout x:Name="terceiraimg">
+       <Image Source ="imagejogo.png"/>
+       <Image Source ="imagejogo.png"/>
+       <Image Source ="imagejogo.png"/>
+    </HorizontalStackLayout>
 
+  </Grid>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</ContentPage>
+  </ContentPage>
