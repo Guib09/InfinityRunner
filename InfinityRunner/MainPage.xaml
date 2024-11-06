@@ -22,6 +22,20 @@
        <Image Source ="imagejogo.png"/>
     </HorizontalStackLayout>
 
-  </Grid>
+    
+      <HorizontalStackLayout x:Name="quartaimg">
+         <Image Source="sonic.png"
+                Aspect="Fill"
+                VerticalOptions="Center"/>
+         <Image Source="chaoo.png"
+                Aspect="Fill"
+                VerticalOptions="Center"/>
+         <Image Source="chaoo.png"
+                Aspect="Fill"
+                VerticalOptions="Center"/>
+      </HorizontalStackLayout>
+
+
+   </Grid>
 
   </ContentPage>
