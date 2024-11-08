@@ -117,6 +117,15 @@ public partial class MainPage : ContentPage
 			HSL.TranslationX = view.TranslationX;
 		}
 	}
+	  async Task Desenha()
+	  {
+		while (!estamorto)
+		{
+			GerenciaCenarios();
+		    Player.Desenha();
+            await Task.Delay9tempoEntreFrames):;
+		}
+	  }
 
 
 	//------------------------------------------------------------------------//
