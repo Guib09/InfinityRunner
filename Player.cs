@@ -1,26 +1,30 @@
-public delegate void Calculator();
-public class Player : Animacao
+namespace InfinityRunner
 {
-    public Player (sonic.png a):base (a)
+    public delegate void CallBack();
+    public class Player:Animation
     {
-       for (int i=1; i<= sonic.png; ++i)
-             animacao1.Add($sonic.png){if.toString("Dz")}.png");
-             for(int i=1; i,<sonic.png;++int)
-             animacao2.Add($"sonic.png") {if.toString("Dz")}.png
-             setanimacaoativa(1);
-    }
-     public void die()
-     {
-        loop=false;
-        SetAnimacaoativa(2);
-     }
-      andar01.pngandar02.png
-}
-    public void Run()
-    {
-        lopp=true;
-        setanimacaoativa91);
-        Play();
-    }
-}
+        public Player(CachedImageView a): base(a)
+        {
+            for(int numero = 1; numero <= 12; numero++)
+                Animacao1.Add($"sonic{numero.ToString("D2")}.png");
 
+            for(int numero2 = 1; numero2 <= 2; numero2++)
+                Animacao2.Add($"morto{numero2.ToString("D2")}.png");
+                SetAnimacaoAtiva(1);
+        }
+
+        public void Morto()
+        {
+            loop = false;
+            SetAnimacaoAtiva(2);
+        }
+
+        public void Run()
+        {
+            loop = true;
+            SetAnimacaoAtiva(1);
+            Corre();
+        }
+
+    }
+}
