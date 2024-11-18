@@ -1,30 +1,38 @@
 namespace InfinityRunner
 {
-    public delegate void CallBack();
-    public class Player:Animation
+    public class Player
     {
-        public Player(CachedImageView a): base(a)
-        {
-            for(int numero = 1; numero <= 12; numero++)
-                Animacao1.Add($"sonic{numero.ToString("D2")}.png");
+        private string imagem;
 
-            for(int numero2 = 1; numero2 <= 2; numero2++)
-                Animacao2.Add($"morto{numero2.ToString("D2")}.png");
-                SetAnimacaoAtiva(1);
-        }
-
-        public void Morto()
+        public Player(string imagem)
         {
-            loop = false;
-            SetAnimacaoAtiva(2);
+            this.imagem = imagem;
         }
 
         public void Run()
         {
-            loop = true;
-            SetAnimacaoAtiva(1);
-            Corre();
+            // Lógica de movimento do jogador
         }
 
+        public void Desenha()
+        {
+            // Lógica para desenhar o jogador na tela
+        }
+
+        public double GetY()
+        {
+            // Retorna a posição Y do jogador
+            return 0; // Exemplo simples
+        }
+
+        public void SetY(double y)
+        {
+            // Define a posição Y do jogador
+        }
+
+        public void MoveY(double valor)
+        {
+            // Move o jogador na direção Y
+        }
     }
 }

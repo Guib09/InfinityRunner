@@ -25,7 +25,7 @@
                 Aspect="Fill"/>
       </HorizontalStackLayout>
 
-      <HorizontalStackLayout x:Name="HsLayer3">
+      <HorizontalStackLayout x:Name="img3">
          <Image Source="imgsol.jpg"    
                 Margin="0,80,0,0"
                 Aspect="Fill"/>
@@ -50,7 +50,7 @@
                 VerticalOptions="Center"/>
       </HorizontalStackLayout>
 
- <ffimageloading:CachedImageView x:Name="persona"
+ <ffimageloading:CachedImageView x:Name="sonic"
                                  CacheType ="All"
                                  CacheDuration="365" 
                                  Source="sonic.png"
