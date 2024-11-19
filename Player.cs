@@ -1,38 +1,45 @@
-namespace InfinityRunner
+using System.Linq.Expressions;
+using FFImageLoading.Maui;
+
+public delegate void CallBack();
+public class Player : Animacao
 {
-    public class Player
+    public Player(CachedImageView a) : base(a)
     {
-        private string imagem;
-
-        public Player(string imagem)
-        {
-            this.imagem = imagem;
-        }
-
-        public void Run()
-        {
-            // Lógica de movimento do jogador
-        }
-
-        public void Desenha()
-        {
-            // Lógica para desenhar o jogador na tela
-        }
-
-        public double GetY()
-        {
-            // Retorna a posição Y do jogador
-            return 0; // Exemplo simples
-        }
-
-        public void SetY(double y)
-        {
-            // Define a posição Y do jogador
-        }
-
-        public void MoveY(double valor)
-        {
-            // Move o jogador na direção Y
-        }
+        for (int i = 1; i < 12; ++i)
+            animacao1.Add($"mario{i.ToString("D2")}.png");
+        for (int i = 1; i < 6; ++i)
+            animacao2.Add($"morrer{i.ToString("D2")}.png");
+        SetAnimacaoAtiva(1);
+    }
+    public void Die()
+    {
+        loop = false;
+        SetAnimacaoAtiva(2);
+    }
+    public void Run()
+    {
+        loop = true;
+        SetAnimacaoAtiva(1);
+        Play();
+    }
+    {
+        loop = true;
+        SetAnimacaoAtiva(1);
+        Play();
+    }
+    public void MoveY (int s)
+    {
+        ImageView.TranslationY +=s;
+    }
+    public double GetY ()
+    {
+        return ImageView.TranslationY;
+    }
+    public void SetY (double a)
+    {
+        ImageView.TranslationY = a;
     }
 }
+
+        

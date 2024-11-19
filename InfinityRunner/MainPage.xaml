@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InfinityRunner.MainPage"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Maui;assembly=FFImageLoading.Maui"
+             xmlns:ff="usingFFImageLoading.Maui=assembly=FFImageLoading.Maui"
              Shell.NavBarIsVisible="false">
 
     
@@ -38,7 +38,7 @@
       </HorizontalStackLayout>
 
 
-      <HorizontalStackLayout x:Name="HsLayer4Chao">
+      <HorizontalStackLayout x:Name="Chao">
          <Image Source="imagejogo.png"
                 Aspect="Fill"
                 VerticalOptions="Center"/>
@@ -48,17 +48,19 @@
          <Image Source="imagejogo.png"
                 Aspect="Fill"
                 VerticalOptions="Center"/>
+
       </HorizontalStackLayout>
 
- <ffimageloading:CachedImageView x:Name="sonic"
-                                 CacheType ="All"
-                                 CacheDuration="365" 
-                                 Source="sonic.png"
-                                 HeightRequest="150"
-                                 VerticalOptions="End"
-                                 HorizontalOptions="Start"
-                                 Margin="0,0,0,125"/>
-   </Grid>
+      <ff:CachedImageView x:Name="imgplayer"
+                                  CacheType="All"
+                                  CacheDuration="365"
+                                  Source="sonic.png"
+                                  HeightRequest="200"
+                                  WidthRequest="180"
+                                  VerticalOptions="End"
+                                  HorizontalOptions="Start"/>
 
-
+                
+   
+</Grid>
 </ContentPage>

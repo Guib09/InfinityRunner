@@ -1,3 +1,4 @@
+usinFFimageLoading.Maui;
 namespace InfinityRunner
 
 {
