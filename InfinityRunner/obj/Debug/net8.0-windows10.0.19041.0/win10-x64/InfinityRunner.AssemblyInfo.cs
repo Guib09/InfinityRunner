@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InfinityRunner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+a98b22d9bccbf7fcc0c2b9ff440f316aacb08501")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+ed2815e367f0ca20bef3b573487de4671a677b86")]
 [assembly: System.Reflection.AssemblyProductAttribute("InfinityRunner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InfinityRunner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2,56 +2,54 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InfinityRunner.MainPage"
-             xmlns:ff="usingFFImageLoading.Maui=assembly=FFImageLoading.Maui"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              Shell.NavBarIsVisible="false">
 
-    
    <Grid>
-      <HorizontalStackLayout x:Name="img1">
-         <Image Source="imgsuperficie.jpg"
-                Aspect="Fill"/>
-         <Image Source="imgsuperficie.jpg"
-                Aspect="Fill"/>
-         <Image Source="imgsuperficie.jpg"
-                Aspect="Fill"/>
-      </HorizontalStackLayout>
+              <Grid.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="OnGridTapped"/>
+              </Grid.GestureRecognizers>
+              <HorizontalStackLayout x:Name="HSLayer1">
+                     <Image Source="imgfundo.jpg"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+                     <Image Source="imgfundo.jpg"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+                     <Image Source="imgfundo.jpg"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+              </HorizontalStackLayout>
+              <HorizontalStackLayout x:Name="HSLayer2">
+                     <Image Source="imgplanetas.jpg"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+                     <Image Source="imgplanetas.jpg"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+                     <Image Source="imgplanetas.jpg"
+                            Aspect="AspectFill"
+                            VerticalOptions="Fill"/>
+              </HorizontalStackLayout>
+              <HorizontalStackLayout x:Name="HSLayerChao"
+                                     HeightRequest="100"
+                                     VerticalOptions="End">
+                     <Image Source="imagejogo.png"
+                            HorizontalOptions="Fill"
+                            HeightRequest="100"
+                            Aspect="Fill"/>
+                     <Image Source="imagejogo.png"
+                            HorizontalOptions="Fill"
+                            HeightRequest="100"
+                            Aspect="Fill"/>
+                     <Image Source="imagejogo.png"
+                            HorizontalOptions="Fill"
+                            HeightRequest="100"
+                            Aspect="Fill"/>
 
-      <HorizontalStackLayout x:Name="img2">
-         <Image Source="imgplanetas.jpg"
-                Aspect="Fill"/> 
-         <Image Source="imgplanetas.jpg"
-                Aspect="Fill"/>
-         <Image Source="imgplanetas.jpg"
-                Aspect="Fill"/>
-      </HorizontalStackLayout>
+              </HorizontalStackLayout>
 
-      <HorizontalStackLayout x:Name="img3">
-         <Image Source="imgsol.jpg"    
-                Margin="0,80,0,0"
-                Aspect="Fill"/>
-         <Image Source="imgsol.jpg"            
-                Margin="0,80,30,0"
-                Aspect="Fill"/>
-         <Image Source="imgsol.jpg"               
-                Margin="0,80,0,0"
-                Aspect="Fill"/>
-      </HorizontalStackLayout>
-
-
-      <HorizontalStackLayout x:Name="Chao">
-         <Image Source="imagejogo.png"
-                Aspect="Fill"
-                VerticalOptions="Center"/>
-         <Image Source="imagejogo.png"
-                Aspect="Fill"
-                VerticalOptions="Center"/>
-         <Image Source="imagejogo.png"
-                Aspect="Fill"
-                VerticalOptions="Center"/>
-
-      </HorizontalStackLayout>
-
-      <ff:CachedImageView x:Name="imgplayer"
+              <ff:CachedImageView x:Name="imgplayer"
                                   CacheType="All"
                                   CacheDuration="365"
                                   Source="sonic.png"
@@ -59,8 +57,5 @@
                                   WidthRequest="180"
                                   VerticalOptions="End"
                                   HorizontalOptions="Start"/>
-
-                
-   
-</Grid>
+       </Grid>
 </ContentPage>
