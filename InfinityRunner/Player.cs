@@ -2,16 +2,18 @@ using System.Linq.Expressions;
 using FFImageLoading.Maui;
 
 public delegate void CallBack();
-public class Player : Animacao
+public class Player:Animacao
 {
     public Player(CachedImageView a) : base(a)
     {
-        for (int i = 1; i < 12; ++i)
-            animacao1.Add($"mario{i.ToString("D2")}.png");
-        for (int i = 1; i < 6; ++i)
-            animacao2.Add($"morrer{i.ToString("D2")}.png");
-        SetAnimacaoAtiva(1);
-    }
+            for(int numero = 1; numero <= 7; numero++)
+                Animacao1.Add($"corre{numero.ToString("D2")}.png");
+
+            for(int numero2 = 1; numero2 <= 2; numero2++)
+                Animacao2.Add($"morto{numero2.ToString("D2")}.png");
+            SetAnimacaoAtiva(1);
+        }
+
     public void Die()
     {
         loop = false;
@@ -23,11 +25,7 @@ public class Player : Animacao
         SetAnimacaoAtiva(1);
         Play();
     }
-    {
-        loop = true;
-        SetAnimacaoAtiva(1);
-        Play();
-    }
+     
     public void MoveY (int s)
     {
         ImageView.TranslationY +=s;
